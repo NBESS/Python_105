@@ -29,10 +29,24 @@ while True:
     menu_choice = int(input(main_menu))
 
     # Add if/else statements for each menu item
+    if menu_choice == 1:
+        print(groceries)
 
-    # For each of these, add in code to handle adding/editing/removing items
+    # Add items
+    elif menu_choice == 2:
+        pass
 
-    if menu_choice == 5:
+    # Edit items
+    elif menu_choice == 3:
+        pass
+
+    # Remove items
+    elif menu_choice == 4:
+        pass
+
+    # Exit app
+
+    elif menu_choice == 5:
         break
 
 print('Thank you for using the grocery list app!')
