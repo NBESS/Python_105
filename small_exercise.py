@@ -46,11 +46,28 @@ while True:
             groceries.append(item)
         print(main_menu)
     
-
     # Edit items
     elif menu_choice == 3:
-        pass
+        # Give them the chance to replace 
+        start_index_to_replace = int(input('What start index to replace? '))
+        end_index_to_replace = int(input('What end index to replace? '))
 
+        if start_index_to_replace == end_index_to_replace:
+            # Prompt the user for the new item
+            new_item = input('What is the new item? ')
+
+            # - replace the item at that index with the new item
+            groceries[start_index_to_replace] = new_item
+        else:
+            # gather replacements
+            replacements = []
+            while True:
+                new_item = input('What is the new item? ')
+                if new_item == '':
+                    break
+                replacements.append(new_item)
+            groceries[start_index_to_replace:end_index_to_replace] = replacements
+            
     # Remove items
     elif menu_choice == 4:
         pass
@@ -69,26 +86,7 @@ print('Thank you for using the grocery list app!')
 
 
 
-# # Give them the chance to replace 
-# start_index_to_replace = int(input('What start index to replace? '))
-# end_index_to_replace = int(input('What end index to replace? '))
 
-# if start_index_to_replace == end_index_to_replace:
-#     # Prompt the user for the new item
-#     new_item = input('What is the new item? ')
-
-#     # - replace the item at that index with the new item
-#     groceries[start_index_to_replace] = new_item
-# else:
-#     # gather replacements
-#     replacements = []
-#     while True:
-#         new_item = input('What is the new item? ')
-#         if new_item == '':
-#             break
-#         replacements.append(new_item)
-#     groceries[start_index_to_replace:end_index_to_replace] = replacements
-#     print(groceries)
 
 
 # # - print the updated combined list
