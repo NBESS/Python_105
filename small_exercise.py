@@ -30,11 +30,22 @@ while True:
 
     # Add if/else statements for each menu item
     if menu_choice == 1:
-        print(groceries)
+        # Print the grocery list with indexes
+        indexes = range(len(groceries))
+        for i in indexes:
+            item = groceries[i]
+            print(f'{i}: {item}')
 
     # Add items
     elif menu_choice == 2:
-        pass
+        while True:
+            item = input('What do you need from the store? ')
+
+            if item == '':  # Alternatively: check if len(item) == 0
+                break
+            groceries.append(item)
+        print(main_menu)
+    
 
     # Edit items
     elif menu_choice == 3:
@@ -51,21 +62,12 @@ while True:
 
 print('Thank you for using the grocery list app!')
 
-# # Prompt for a new item until they just hit Enter
-# while True:
-#     item = input('What do you need from the store? ')
+# Prompt for a new item until they just hit Enter
 
-#     if item == '':  # Alternatively: check if len(item) == 0
-#         break
-#     groceries.append(item)
 
 # # After we break, python will move to the next unindented line of code after the loop
 
-# # Print the grocery list with indexes
-# indexes = range(len(groceries))
-# for i in indexes:
-#     item = groceries[i]
-#     print(f'{i}: {item}')
+
 
 # # Give them the chance to replace 
 # start_index_to_replace = int(input('What start index to replace? '))
