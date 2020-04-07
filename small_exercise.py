@@ -38,24 +38,39 @@ while True:
 
     # Add items
     elif menu_choice == 2:
+       
         # Add sub_menu
         sub_menu = '''
 
-        1. Print Items
-        2. Add Items
-        3. Return to Main Menu
+1. Print Items
+2. Add Items
+3. Return to Main Menu
 
         '''
         while True:
             sub_menu_choice = int(input(sub_menu))
 
             # Add if/else statements for each menu item
-            if sub_menu_choice == 1
-            item = input('What do you need from the store? ')
+            if sub_menu_choice == 1:
 
-            if item == '':  # Alternatively: check if len(item) == 0
+                # Print the grocery list with indexes
+                indexes = range(len(groceries))
+                for i in indexes:
+                    item = groceries[i]
+                    print(f'{i}: {item}')
+
+            elif sub_menu_choice == 2:
+
+                while True:
+                    # Add the items
+                    item = input('What do you need from the store? ')
+
+                    if item == '':  # Alternatively: check if len(item) == 0
+                        break
+                    groceries.append(item)
+            
+            elif sub_menu_choice == 3:
                 break
-            groceries.append(item)
     
     # Edit items
     elif menu_choice == 3:
