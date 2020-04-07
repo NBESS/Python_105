@@ -38,13 +38,24 @@ while True:
 
     # Add items
     elif menu_choice == 2:
+        # Add sub_menu
+        sub_menu = '''
+
+        1. Print Items
+        2. Add Items
+        3. Return to Main Menu
+
+        '''
         while True:
+            sub_menu_choice = int(input(sub_menu))
+
+            # Add if/else statements for each menu item
+            if sub_menu_choice == 1
             item = input('What do you need from the store? ')
 
             if item == '':  # Alternatively: check if len(item) == 0
                 break
             groceries.append(item)
-        print(main_menu)
     
     # Edit items
     elif menu_choice == 3:
