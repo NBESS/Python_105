@@ -58,6 +58,7 @@ while True:
 
             # - replace the item at that index with the new item
             groceries[start_index_to_replace] = new_item
+
         else:
             # gather replacements
             replacements = []
@@ -70,31 +71,20 @@ while True:
             
     # Remove items
     elif menu_choice == 4:
-        pass
+        # Give them the chance to remove
+        start_index_to_remove = int(input('What start index to remove? '))
+        end_index_to_remove = int(input('What end index to remove? '))
 
+        if start_index_to_remove == end_index_to_remove:
+            # Delete the item at start_index_to_remove from list
+            del groceries[start_index_to_remove]
+        
+        else:
+            # Delete items in range from list
+            del groceries[start_index_to_remove:end_index_to_remove + 1]
+            
     # Exit app
-
     elif menu_choice == 5:
         break
 
 print('Thank you for using the grocery list app!')
-
-# Prompt for a new item until they just hit Enter
-
-
-# # After we break, python will move to the next unindented line of code after the loop
-
-
-
-
-
-
-# # - print the updated combined list
-# for i in indexes:
-#     item = groceries[i]
-#     print(f'{i}: {item}')
-
-
-# # to_delete = [3, 5, 6, 9]
-# # for index_of_item_to_delete in to_delete:
-# #     del groceries[index_of_item_to_delete]
